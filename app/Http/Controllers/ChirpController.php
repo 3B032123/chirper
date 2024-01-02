@@ -15,7 +15,9 @@ class ChirpController extends Controller
     {
         //
         //return response('Hello, World!');
-        return view('chirps.index');
+        return view('chirps.index', [
+            'chirps' => Chirp::with('user')->latest()->get(),
+        ]);
     }
 
     /**
