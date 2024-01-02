@@ -13,7 +13,8 @@ class ChirpController extends Controller
     public function index()
     {
         //
-        return response('Hello, World!');
+        //return response('Hello, World!');
+        return view('chirps.index');
     }
 
     /**
